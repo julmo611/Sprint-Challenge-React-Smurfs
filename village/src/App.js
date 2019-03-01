@@ -35,11 +35,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       <nav>
-            <NavLink to='/'>All Smurfs</NavLink><br/>
-            <NavLink to='/smurf-form'>Add a New Smurf</NavLink>
-        </nav>
-        <Route exact path="/" render={ props => (
+         <Route exact path="/" render={ props => (
             <Smurfs 
               {...props}
               smurfs={this.state.smurfs}
@@ -51,6 +47,10 @@ class App extends Component {
               {...props}
               handleUpdate={(response) => {this.handleUpdate(response)}}
         />)} />
+         <nav>
+            <NavLink exact to='/'>All Smurfs</NavLink>
+            <NavLink to='/smurf-form'>Add a New Smurf</NavLink>
+        </nav>
       </div>
     );
   }
