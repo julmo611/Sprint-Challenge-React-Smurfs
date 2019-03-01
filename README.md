@@ -28,10 +28,30 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the differences between `client-side routing` and `server-side routing`.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
-- [ ] Mention three tools we can use to make AJAX requests.
+- [x] Explain the differences between `client-side routing` and `server-side routing`.
+    
+    Client side
+    ** Because less data is processed, routing between views is generally faster.
+    ** Smooth transitions and animations between views are easier to implement.
+    
+    Server side
+    ** Search engines can crawl the site for better SEO.
+    ** The initial page load is faster.
+    ** Great for static sites.
 
+
+
+- [x] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+    
+    ** POST: allows a user to "CREATE" New data
+    ** GET: allows a user to "READ" existing data
+    ** PUT allows a user to "UPDATE" existing data
+    ** DELETE allows a user to "DELETE" remove data
+
+- [x] Mention three tools we can use to make AJAX requests.
+    ** Axios
+    ** Fetch
+    ** Postman
 
 ## Project Set Up
 
@@ -54,8 +74,8 @@ Follow these steps to set up and work on your project:
 Follow these steps for completing your project:
 
 - [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [x] Add your Project Manager as a Reviewer on the Pull-request
+- [x] PM then will count the HW as done by  merging the branch back into master.
 ## Minimum Viable Product
 
 The MVP of this project will be broken up between 2 stages. Follow each step and be sure to use your design/style skills to make this application look professional.

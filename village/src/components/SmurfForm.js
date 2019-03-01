@@ -18,9 +18,9 @@ class SmurfForm extends Component {
 
     axios
     .post('http://localhost:3333/smurfs', {
-      name,
-      age,
-      height
+      name: name,
+      age: age,
+      height: height
     })
     .then(
     this.setState({
@@ -36,6 +36,7 @@ class SmurfForm extends Component {
 
   handleChange = e => {
     this.setState({
+      // eslint-disable-next-line 
         [e.target.name]: e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
       });
     }
@@ -45,25 +46,25 @@ class SmurfForm extends Component {
       <div className="SmurfForm">
         <form onSubmit={this.addSmurf}>
           <input
+            name="name"
             onChange={this.handleChange}
-            type="text"
+            type="string"
             placeholder="name"
             value={this.state.name}
-            name="name"
           />
           <input
+            type="number"
             onChange={this.handleChange}
             placeholder="age"
             value={this.state.age}
             name="age"
-            type="number"
           />
           <input
+            type="string"
             onChange={this.handleChange}
             placeholder="height"
             value={this.state.height}
             name="height"
-            type="string"
           />
           <button type="submit">Add to the village</button>
         </form>
