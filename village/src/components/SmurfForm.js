@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import './Smurf.css';
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -11,38 +13,56 @@ class SmurfForm extends Component {
   }
 
   addSmurf = event => {
+    const { name, age, height } = this.state;
     event.preventDefault();
     // add code to create the smurf using the api
 
+    axios
+    .post('http://localhost:3333/smurfs', {
+      name: name,
+      age: age,
+      height: height
+    })
+    .then(
     this.setState({
       name: '',
       age: '',
       height: ''
-    });
+    }))
+    .then((res) => {
+      this.props.handleUpdate(res.data)
+    })
+    .catch(err => console.log(err, "post error"))
   }
 
-  handleInputChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  handleChange = e => {
+    this.setState({
+      // eslint-disable-next-line 
+        [e.target.name]: e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
+      });
+    }
 
   render() {
     return (
       <div className="SmurfForm">
         <form onSubmit={this.addSmurf}>
           <input
-            onChange={this.handleInputChange}
+            name="name"
+            onChange={this.handleChange}
+            type="string"
             placeholder="name"
             value={this.state.name}
-            name="name"
           />
           <input
-            onChange={this.handleInputChange}
+            type="number"
+            onChange={this.handleChange}
             placeholder="age"
             value={this.state.age}
             name="age"
           />
           <input
-            onChange={this.handleInputChange}
+            type="string"
+            onChange={this.handleChange}
             placeholder="height"
             value={this.state.height}
             name="height"

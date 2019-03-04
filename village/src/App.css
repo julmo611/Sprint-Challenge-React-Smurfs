@@ -1,3 +1,33 @@
 .App {
   text-align: center;
 }
+
+
+.App nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+nav a {
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  background-color: #4f79b9;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  background-color: #264069;
+
+}
+
+nav .active {
+  background-color: #264069;
+  border-bottom: 2px solid #355e9c;
+}

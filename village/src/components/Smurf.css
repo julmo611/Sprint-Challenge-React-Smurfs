@@ -1,0 +1,76 @@
+.Smurfs h1 {
+    text-transform: uppercase;
+    background-color: #355e9c;
+    margin-top: 0;
+    border-bottom: 2px solid #355e9c;
+    padding: 50px 0 20px;
+    color: #ffffff;
+}
+
+.Smurfs ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Smurf {
+    width: 250px;
+    margin: 10px;
+    background-color: #4f79b9;
+    color: #ffffff;
+    border-radius: 5px;
+    border-bottom: 2px solid #355e9c;
+}
+
+.Smurf:hover {
+    background-color: #264069;
+}
+
+.Smurf h3 {
+    text-transform: uppercase;
+    margin: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.Smurf strong {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+
+.SmurfForm {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    background-color: #4f79b9;
+    color: #ffffff;
+}
+
+form input::placeholder {
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+form button {
+    background-color: #4f79b9;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 2px 2px 2px 2px #433c9a;
+    box-shadow: 2px 2px 2px 2px #433c9a;
+}
